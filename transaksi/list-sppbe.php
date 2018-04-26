@@ -34,18 +34,10 @@
                                    while($row=mysqli_fetch_array($result)){
                                    echo "<tr>";
                                    echo "<td>".$no."</td>";
-                                   echo "<td>".$row['lonumber']."</td>";
-                                   echo"<td>".$row['tranportirtujuan']."</td>";
+                                   echo "<td>".$row['sppbe']."</td>";
                                    echo"<td>".$row['nospa']."</td>";
-                                   echo"<td>".$row['sppbe']."</td>";
-                                   echo"<td>".$row['kapasitas']."</td>";
-                                   echo"<td>".$row['driver']."</td>";
-                                   echo"<td>".$row['nopol']."</td>";
-                                   echo"<td>".$row['bangsal']."</td>";
-                                   echo"<td>".date('H:i', strtotime($row['masuk']))."</td>";
-                                   echo"<td>".date('H:i', strtotime($row['keluar']))."</td>";
-                                   echo"<td>".date('H:i', strtotime($row['durasi']))."</td>";
-                                   echo"<td>".$row['isi']."</td>";
+                                   echo"<td>".$row['thruput_harian']."</td>";
+                                   echo"<td>".$row['thruput_total']."</td>";
                                    echo"</tr>";
                                    $no++;
                                  }?>
