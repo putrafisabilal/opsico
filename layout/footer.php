@@ -30,8 +30,15 @@
 <script src="../assets/js/charts-custom.js"></script>
 <script src="../assets/js/charts-home.js"></script>
 
-
-
+<!-- fancy box -->
+<!-- <script src="../assets/js/jquery.js"></script> -->
+<script src="../assets/js/fancybox/jquery.fancybox.js"></script>
+<script type="text/javascript">
+    $(function() {
+      //    fancybox
+        jQuery(".fancybox").fancybox();
+    });
+</script>
 
 <!--script for this page-->
 <script src="../assets/js/sparkline-chart.js"></script>
