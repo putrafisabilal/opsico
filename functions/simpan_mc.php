@@ -1,0 +1,24 @@
+<?php
+  include 'db_connect.php';
+
+  $berkas = $_FILES['mc']['name'];
+  $berkastipe = $_FILES['mc']['type'];
+  $berkassize = $_FILES['mc']['size'];
+
+  $maxsize = 1024 * 1000;
+  $target_dir = "../file/penerimaan/";
+  $tempat_file = $target_dir.basename($_FILES["mc"]["name"]);
+
+  if ($berkas !== NULL || $berkas !== '') {
+  	if (move_uploaded_file($_FILES['mc']['tmp_name'], $tempat_file)) {
+  		$insert_berkas = move_uploaded_file($_FILES['mc']['tmp_name'], $tempat_file);
+      $tambahlomba = $con->query("INSERT INTO master_cable(url_file) VALUES ('".$tempat_file."');");
+  	}
+  }
+
+  if ($tambahlomba) {
+      header('location:../transaksi/upload-mc.php');
+    } else {
+  header('location:../transaksi/upload-mc.php?status=4');
+}
+ ?>
