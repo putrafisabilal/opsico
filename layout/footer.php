@@ -10,7 +10,7 @@
 <!--footer end-->
 <!-- js placed at the end of the document so the pages load faster -->
 <script src="../assets/js/jquery.js"></script>
-<script src="../assets/js/jquery-3.3.1.min.js"></script>
+<!-- <script src="../assets/js/jquery-3.3.1.min.js"></script> -->
 <script src="../assets/js/bootstrap.min.js"></script>
 <script class="include" type="text/javascript" src="../assets/js/jquery.dcjqaccordion.2.7.js"></script>
 <script src="../assets/js/jquery.scrollTo.min.js"></script>
@@ -30,9 +30,13 @@
 <script src="../assets/js/charts-custom.js"></script>
 <script src="../assets/js/charts-home.js"></script>
 
+
+
+
 <!--script for this page-->
 <script src="../assets/js/sparkline-chart.js"></script>
 <script src="../assets/js/zabuto_calendar.js"></script>
+
 
 <script type="application/javascript">
     $(document).ready(function () {
