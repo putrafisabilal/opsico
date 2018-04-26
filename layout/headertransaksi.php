@@ -19,6 +19,8 @@
     <!-- Bootstrap core CSS -->
     <link href="../assets/css/bootstrap.css" rel="stylesheet">
     <!--external css-->
+    <link rel="stylesheet" href="../assets/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/responsive.bootstrap.min.css">
     <link href="../assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="../assets/css/zabuto_calendar.css">
     <link rel="stylesheet" type="text/css" href="../assets/js/gritter/css/jquery.gritter.css" />
@@ -29,7 +31,10 @@
     <link href="../assets/css/style.css" rel="stylesheet">
     <link href="../assets/css/style-responsive.css" rel="stylesheet">
 
+    <script src="../assets/js/jquery-3.3.1.min.js"></script>
     <script src="../assets/js/chart-master/Chart.js"></script>
+
+
     <!-- <script src="../assets/js/jquery.js"></script> -->
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>

@@ -16,7 +16,7 @@
                                   <div class="table table-striped table-inverse">
                                     <h1>Laporan Harian</h1>
                                     <hr class="style1">
-                               <table class="table table-bordered">
+                               <table id="dataTable" class="table table-bordered">
                                  <thead>
                                    <tr>
                                      <th scope="col" ><center>NO</center></th>
@@ -24,6 +24,7 @@
                                      <th scope="col" ><center>NO PLANT</center></th>
                                      <th scope="col" ><center>THRUPUT HARIAN</center></th>
                                      <th scope="col" ><center>THRUPUT TOTAL</center></th>
+                                     <th scope="col" ><center>TYPE</center></th>
                                    </tr>
                                  </thead>
                                  <tbody>
@@ -38,6 +39,7 @@
                                    echo"<td>".$row['nospa']."</td>";
                                    echo"<td>".$row['thruput_harian']."</td>";
                                    echo"<td>".$row['thruput_total']."</td>";
+                                   echo"<td>".$row['type']."</td>";
                                    echo"</tr>";
                                    $no++;
                                  }?>
@@ -45,6 +47,12 @@
                              </table>
                              <button type="button" class="btn btn-success">Print</button>
                           </div>
+                          <!-- data tables -->
+                          <script src="../assets/js/jquery.dataTables.min.js"></script>
+                          <script src="../assets/js/dataTables.bootstrap.min.js"></script>
+                          <script type="text/javascript">
+                              $('#dataTable').dataTable();
+                          </script>
                   </div><!-- /col-lg-9 END SECTION MIDDLE -->
               </div><! --/row -->
           </section>
