@@ -19,7 +19,7 @@
                                       <div class="col-12">
                                         <h1>Form Penilaian</h1>
                                         <hr class="style1">
-                                      <form class="" name="formNilai" action="../functions/simpan_nilai.php?hak=<?php echo $hak ?>" onsubmit="return validateForm()" method="post">
+                                      <form class="" id="formNilai" name="formNilai" action="../functions/simpan_nilai.php?hak=<?php echo $hak ?>" onsubmit="return validateForm()" method="post">
                                         <?php if(isset($_GET['status'])){?>
                                           <?php if ($_GET['status'] == 4){?>
                                             <div class="alert alert-danger" alert-respons" role="alert"">
@@ -77,6 +77,8 @@
                                         </div>
                                         <button type="submit" class="btn btn-primary">add</button>
                                       </form>
+                                      <!-- validasi -->
+                                    <!-- <?php //include('../validasi/validasi-nilai.php') ?> -->
                                     </div>
                                    </div>
                                   </div>
