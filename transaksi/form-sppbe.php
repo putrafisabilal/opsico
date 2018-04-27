@@ -1,6 +1,5 @@
 <?php include('../layout/headertransaksi.php'); ?>
 <?php include('../layout/sidebar-usertransaksi.php'); ?>
-<?php include('../validasi/validasi-nilai.php') ?>
       <!-- **********************************************************************************************************************************************************
       MAIN CONTENT
       *********************************************************************************************************************************************************** -->
@@ -19,15 +18,27 @@
                                       <div class="col-12">
                                         <h1>Form Tambah SPPBE</h1>
                                         <hr class="style1">
-                                      <form class="" name="formSppbe" action="../functions/simpan_sppbe.php?hak=<?php echo $hak ?>" onsubmit="return validateForm()" method="post">
-                                        <?php if(isset($_GET['status'])){?>
-                                          <?php if ($_GET['status'] == 4){?>
-                                            <div class="alert alert-danger" alert-respons" role="alert"">
-                                                <button type="button" class="close" style="margin-left:8px;line-height:0.8;" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                <strong><i class="fa fa-times" aria-hidden="true"></i> Gagal !</strong> Gagal menambahkan data!
-                                            </div>
-                                            <?php } ?>
-                                        <?php };  ?>
+                                      <form class="" name="formSppbe" action="../functions/simpan_sppbe.php" method="post">
+                                        <!-- alert -->
+                                          <?php if(isset($_GET['status'])):?>
+                                                <?php if ($_GET['status'] == 4):?>
+                                                  <div class="alert alert-danger" alert-respons" role="alert"">
+                                                      <button type="button" class="close" style="margin-left:8px;line-height:0.8;" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                      <strong><i class="fa fa-times" aria-hidden="true"></i> Gagal !</strong> Gagal menambahkan data!
+                                                  </div>
+                                                <?php elseif ($_GET['status'] == 1):?>
+                                                  <div class="alert alert-success" alert-respons" role="alert"">
+                                                      <button type="button" class="close" style="margin-left:8px;line-height:0.8;" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                      <strong><i class="fa fa-times" aria-hidden="true"></i> Berhasil ! </strong> Sukses memasukan data!
+                                                  </div>
+                                                <?php elseif ($_GET['status'] == 3):?>
+                                                  <div class="alert alert-danger" alert-respons" role="alert"">
+                                                      <button type="button" class="close" style="margin-left:8px;line-height:0.8;" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                      <strong><i class="fa fa-times" aria-hidden="true"></i> Gagal !</strong> Gagal menambahkan data karena nospa sama!
+                                                  </div>
+                                              <?php endif; ?>
+                                          <?php endif; ?>
+                                        <!-- end alert -->
                                         <div class="form-group">
                                           <label for="nama">Nama SPPBE :</label>
                                           <input name="sppbe" type="text" class="form-control" pattern="[a-zA-Z].{3,}" maxlength="50" required="harap masukan nama sppbe">
