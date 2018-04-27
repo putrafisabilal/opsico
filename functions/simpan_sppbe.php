@@ -17,7 +17,7 @@
       $tambahdata = $con->query($query);
 
       if ($tambahdata) {
-        header("location:../transaksi/form-sppbe.php?status=1);
+        header("location:../transaksi/form-sppbe.php?status=1");
       } else {
         header('location:../transaksi/form-sppbe.php?status=4');
       }
