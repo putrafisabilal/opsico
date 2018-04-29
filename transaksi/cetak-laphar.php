@@ -57,8 +57,8 @@
                             $no = 1;
                             // $laporan = array();
                             $laporan = array('Laporan 1','Laporan 2','Laporan 3','Laporan 4','Laporan 5','Laporan Gasdom','FD-235');
-                            $href = array('#','print_laporan2','#','print_laporan4','print_laporan5','print_lapgasdom','print_lapfd');
-                            $hrefi = array('#','print_laporan2','#','laporan_lembar4','laporan_lembar5','laporan_gasdom','fd-235');
+                            $href = array('print_laporan1','print_laporan2','print_laporan3','print_laporan4','print_laporan5','print_lapgasdom','print_fd235');
+                            $hrefi = array('#','laporan_lembar2','#','laporan_lembar4','laporan_lembar5','laporan_gasdom','fd-235');
                             for($i=0;$i<7;$i++){
                               echo "<tr>";
                               echo "<th scope=row>".$no."</th>";
