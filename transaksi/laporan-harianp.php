@@ -38,8 +38,8 @@
                             </div>
                           </div>
                           <?php if(isset($_GET['tanggal'])){ $t = $_GET['tanggal']?>
-                          //button bangsal
-                          <div class="col-md-offset-1">
+                          <!-- button bangsal -->
+                          <div class="col-md-6">
                           <div class="col-md-offset-1 dropdown">
                             <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Bangsal
                               <span class="caret"></span></button>
@@ -57,7 +57,7 @@
                         <?php if(isset($_GET['Bangsal'])){ ?>
                             <h4>Bangsal : <?php echo $_GET['Bangsal'];?></h4>
                         <br>
-                        <table class="table table-bordered">
+                        <table id="dataTable" class="table table-bordered">
                           <thead>
                             <tr>
                               <th scope="col" rowspan="2">No</th>
@@ -114,6 +114,12 @@
                       <button type="button" class="btn btn-success">Print</button>
                           <?php }?>
                         </div>
+                        <!-- data tables -->
+                        <script src="../assets/js/jquery.dataTables.min.js"></script>
+                        <script src="../assets/js/dataTables.bootstrap.min.js"></script>
+                        <script type="text/javascript">
+                            $('#dataTable').dataTable();
+                        </script>
                    </div>
                  </div>
               </div><!-- /col-lg-9 END SECTION MIDDLE -->

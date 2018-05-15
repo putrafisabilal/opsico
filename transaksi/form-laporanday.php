@@ -59,10 +59,25 @@
                                 <label for="nama">LO Number :</label>
                                 <input type="text" name="lo" class="form-control">
                               </div>
-                              <div class="form-group">
+                               <div class="form-group">
+                                 <label for="jk">No. SPA :</label>
+                                 <select name="nospa" class="form-control" id="jk">
+                                   <?php
+                                       $nospa = "SELECT nospa FROM alokasi where pakai ='0'";
+                                       $rno = $con->query($nospa);
+                                       while($row=mysqli_fetch_array($rno)){
+                                         $data = explode('-',$row['nospa']);
+                                         $arr = array($data[0],$data[4]);
+                                         $data1 =  implode('',$arr);
+                                         echo "<option value=".$data1.">".$data1."</option>";
+                                       }
+                                    ?>
+                                 </select>
+                               </div>
+                              <!-- <div class="form-group">
                                 <label for="nama">No. SPA :</label>
                                 <input type="text" name="nospa" class="form-control" required="required">
-                              </div>
+                              </div> -->
                               <div class="form-group">
                                 <label for="nama">SPPBE :</label>
                                 <input type="text" name="sppbe" class="form-control">

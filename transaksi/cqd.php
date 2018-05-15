@@ -69,7 +69,7 @@
                             </thead>
                             <tbody>
                               <?php
-                              $query = "SELECT * FROM `laporan_harianpp` WHERE tanggal='$tgl'";
+                              $query = "SELECT * FROM `laporan_harianpp` WHERE tanggal='$tgl' and flag='after'";
                               $result = $con->query($query);
                               while($row=mysqli_fetch_array($result)){
                               $tank = $row['tank'];
@@ -78,7 +78,7 @@
                               echo  "<td>before</td>";
                               echo  "<td scope='col' rowspan='2'><center>LPG</center></td>";
                               echo  "<td scope='col' rowspan='2'><center>".$row['tank']."</center></td>";
-                              $query1 = "SELECT * FROM `stock_before` WHERE tanggal='$tgl' and tank='$tank'";
+                              $query1 = "SELECT * FROM `laporan_harianpp` WHERE tanggal='$tgl' and tank='$tank' and flag='before'";
                               $result1 = $con->query($query1);
                               $bef = $result1->fetch_object();
                               echo  "<td>".$bef->liquid_level."</td>";
@@ -92,7 +92,7 @@
                               echo "</tr>";
                               echo "<tr>";
                               echo "<td>after</td>";
-                              $query2 = "SELECT * FROM `laporan_harianpp` WHERE tanggal='$tgl' and tank='$tank'";
+                              $query2 = "SELECT * FROM `laporan_harianpp` WHERE tanggal='$tgl' and tank='$tank' and flag='after'";
                               $result2 = $con->query($query2);
                               $af = $result2->fetch_object();
                               echo  "<td>".$af->liquid_level."</td>";

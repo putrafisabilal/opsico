@@ -20,7 +20,7 @@
                                   <div class="table table-striped table-inverse">
                                     <h1>Laporan Harian</h1>
                                     <hr class="style1">
-                               <table class="table table-bordered">
+                               <table id="dataTable" class="table table-bordered">
                                  <thead>
                                    <tr>
                                      <th scope="col" >LO Number</th>
@@ -61,6 +61,12 @@
                              </table>
                              <button type="button" class="btn btn-success">Print</button>
                           </div>
+                          <!-- data tables -->
+                          <script src="../assets/js/jquery.dataTables.min.js"></script>
+                          <script src="../assets/js/dataTables.bootstrap.min.js"></script>
+                          <script type="text/javascript">
+                              $('#dataTable').dataTable();
+                          </script>
                   </div><!-- /col-lg-9 END SECTION MIDDLE -->
               </div><! --/row -->
           </section>
