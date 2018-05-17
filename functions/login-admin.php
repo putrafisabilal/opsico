@@ -13,6 +13,7 @@ if ($row == 1) {
   $_SESSION['admin'] = $hasil_login;
   $_SESSION['adminnama'] = $hasil_login->namauser;
   $_SESSION['adminhak'] = $hasil_login->hak;
+  $_SESSION['adminnik'] = $hasil_login->nik;
   if($hasil_login->hak == '101'){
   header('location:../');
 } else if($hasil_login->hak == '102'){

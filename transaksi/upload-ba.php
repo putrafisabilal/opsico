@@ -38,10 +38,11 @@
                           <!-- end alert -->
 
                           <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                               <div class="form-group">
                                 <label for="nama">Upload Berita Acara:</label>
-                                <input type="file" name="ba" class="form-control">
+                                <input type="file" name="adminfile" id="inputfile" id="input-file-now-custom-1" data-allowed-file-extensions="jpg png jpeg" data-max-file-size-preview="4M" class="dropify"  required="true">
+                                <!-- <input type="file" name="ba" id="inputfile" id="input-file-now-custom-1"  class="dropify"> -->
                               </div>
                             </div>
                           </div>
@@ -72,5 +73,4 @@
       </footer>
       <!--footer end-->
   </section>
-
 <?php include('../layout/footer.php') ?>

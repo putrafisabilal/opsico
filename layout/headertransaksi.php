@@ -3,7 +3,7 @@
 <?php
  session_start();
  if (empty($_SESSION['adminnama'])) {
- header("location:login.php"); // jika belum login, maka dikembalikan ke file form_login.php
+ header("location:../login.php"); // jika belum login, maka dikembalikan ke file form_login.php
  }
  else {
  ?>
@@ -26,6 +26,10 @@
     <link rel="stylesheet" type="text/css" href="../assets/js/gritter/css/jquery.gritter.css" />
     <link rel="stylesheet" type="text/css" href="../assets/lineicons/style.css">
     <link href="../assets/js/fancybox/jquery.fancybox.css" rel="stylesheet" />
+
+    <!-- Dropzone css -->
+    <link href="../assets/js/dropzone/dropzone.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../assets/js/dropify/dist/css/dropify.min.css">
 
     <!-- Custom styles for this template -->
     <link href="../assets/css/style.css" rel="stylesheet">

@@ -7,8 +7,10 @@
       <!--main content start-->
       <section id="main-content">
           <section class="wrapper">
-            <div class="">
-                <img src="../assets/img/<?php echo $hak ?>.jpg" alt="">
+            <div class="row">
+              <div class="col-md-12">
+                  <img src="../assets/img/<?php echo $hak ?>.jpg" alt="">
+              </div>
             </div>
           </section>
       </section>
